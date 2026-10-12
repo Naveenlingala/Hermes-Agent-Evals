@@ -1,0 +1,42 @@
+@import './tokens.css';
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #app { height: 100%; }
+body { margin: 0; font-family: var(--font); background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 4px; font-weight: 700; }
+h2 { font-size: 17px; margin: 0; letter-spacing: -0.01em; font-weight: 650; }
+h3 { font-size: 14px; margin: 0; font-weight: 650; }
+p { margin: 0; }
+a { color: var(--green-700); text-decoration: none; } a:hover { text-decoration: underline; }
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--radius-sm); }
+.muted { color: var(--text-2); } .faint { color: var(--text-3); } .mono { font-family: var(--mono); font-size: 12.5px; }
+.num { font-variant-numeric: tabular-nums; }
+.page { max-width: 1240px; margin: 0 auto; padding: 28px 28px 64px; }
+.page-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.card-pad { padding: 18px 20px; }
+.card-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.grid { display: grid; gap: 16px; } .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stack > * + * { margin-top: 16px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); padding: 8px 14px; border-radius: var(--radius-sm); font: inherit; font-weight: 600; cursor: pointer; transition: background .12s, border-color .12s; text-decoration: none; }
+.btn:hover { background: var(--surface-2); text-decoration: none; } .btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.primary { background: var(--green-600); border-color: var(--green-600); color: #fff; } .btn.primary:hover { background: var(--green-700); }
+.btn.sm { padding: 5px 10px; font-size: 13px; }
+.field { display: grid; gap: 6px; margin-bottom: 14px; } .field label, .label { font-weight: 600; font-size: 13px; }
+input[type=text], input[type=number], textarea, select { font: inherit; padding: 8px 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: #fff; color: var(--text); width: 100%; }
+textarea { min-height: 84px; resize: vertical; } input:focus, textarea:focus, select:focus { outline: none; box-shadow: var(--focus); border-color: var(--green-500); }
+.err-text { color: var(--red-600); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-3); font-weight: 650; background: var(--surface-2); white-space: nowrap; }
+th.sortable { cursor: pointer; user-select: none; } th.sortable:hover { color: var(--text); }
+tbody tr:last-child td { border-bottom: none; } tbody tr:hover td { background: #fafcfe; }
+.table-wrap { overflow-x: auto; }
+.tabs { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 2px; }
+.tabs button { border: 0; background: none; padding: 5px 12px; font: inherit; font-weight: 600; color: var(--text-2); border-radius: 4px; cursor: pointer; }
+.tabs button[aria-pressed=true] { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+dialog { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0; width: min(680px, calc(100vw - 24px)); max-height: calc(100vh - 32px); box-shadow: var(--shadow-md); color: var(--text); }
+dialog::backdrop { background: rgba(10, 23, 48, .55); }
+.mock-banner { background: var(--amber-100); border: 1px solid #f1d28a; color: var(--amber-600); padding: 9px 14px; border-radius: var(--radius-sm); font-size: 13px; margin-bottom: 16px; }
+@media (max-width: 960px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .page { padding: 20px 16px 56px; } }
+@media (max-width: 620px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } h1 { font-size: 23px; } }

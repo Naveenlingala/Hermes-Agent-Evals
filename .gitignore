@@ -1,0 +1,10 @@
+node_modules
+dist
+.data
+.env
+*.log
+dist-test
+.tools
+.DS_Store
+.claude/settings.local.json
+frontend/dist
