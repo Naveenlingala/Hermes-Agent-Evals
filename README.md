@@ -83,10 +83,11 @@ Use ≥ 5 tasks and ≥ 3 trials before reading anything into the intervals (the
 - Not yet verified: a live Anthropic judge run (needs your key). To spot-check judge scores on real runs, open the run page: each LLM grade shows judge model, evidence, raw response and token usage.
 
 ## Documentation
-- [Design document](docs/DESIGN-DOC.md) — architecture and key decisions
-- [Known limits](docs/LIMITS.md) — what is unverified or out of scope
-- [Approximate costs](docs/COSTS.md) — infra, agent runs, judge, with formulas
-- Frontend visual direction: [DESIGN.md](DESIGN.md)
+- [Design document](docs/architecture.md) — architecture and key decisions
+- [Known limits](docs/limits.md) — what is unverified or out of scope
+- [Approximate costs](docs/costs.md) — infra, agent runs, judge, with formulas
+- [Claude Code starter setup](docs/claude-code-setup.md) — notes on the `.claude/` config
+- Frontend visual direction: [DESIGN.md](DESIGN.md); agent instructions: [AGENTS.md](AGENTS.md), [CLAUDE.md](CLAUDE.md)
 
 ## Commands
 | Command | Purpose |
